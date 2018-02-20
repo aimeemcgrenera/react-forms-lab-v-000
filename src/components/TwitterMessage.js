@@ -6,6 +6,12 @@ class TwitterMessage extends React.Component {
 
     this.state = {};
   }
+  
+  maxChars = event => {
+    this.setState({
+      value: event.target.value,
+    });
+  }
 
   render() {
     return (
@@ -14,7 +20,7 @@ class TwitterMessage extends React.Component {
         <input
         type="text" 
         value={this.state.value} 
-        onChange={this.handleChange}
+        onChange={this.maxChars}
         />
       </div>
     );
